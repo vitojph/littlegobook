@@ -2,14 +2,17 @@ package main
 
 import "fmt"
 
+// let's define a Person
 type Person struct {
     Name string
 }
 
+// who's able to introduce herself
 func (p *Person) Introduce() {
     fmt.Printf("Hola, me llamo %s.\n", p.Name)
 }
 
+// composition: one struct into another, letting it access its methods
 type Saiyan struct {
     *Person
     Power int
